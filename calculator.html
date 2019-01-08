@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Calculator
+	</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+	<script>
+	function clickbtn(val){
+          document.getElementById("num").value=document.getElementById("num").value+val;
+	}
+
+	function clr(){
+		document.getElementById("num").value="";
+	}
+	function solve(){
+		var x= document.getElementById("num").value;
+		var y=eval(x);
+		document.getElementById("num").value=y;
+	}
+
+</script>
+</head>
+<body>
+    <div class="container">
+      <table border="1">
+        <tr>
+          <td colspan="4"><input type="text" name id="num"placeholder ="0" class="form-control" ></td>
+        </tr>
+        <tr>
+        <td><input type="button" value="+" class="btn btn-sm btn1" onclick="clickbtn('+')"></td>
+        <td><button type="button" value="-" class="btn btn-sm btn1" onclick="clickbtn('-')">-</button></td>
+        <td><button type="button" value="*" class="btn btn-sm btn1" onclick="clickbtn('*')">*</button></td>
+        <td><button type="button" value="/" class="btn btn-sm btn1"onclick="clickbtn('/')">/</button></td>
+        </tr>
+
+        <tr>
+        <td><button type="button" value="7" class="btn btn-sm btn1"onclick="clickbtn('7')">7</button></td>
+        <td><button type="button" value="8" class="btn btn-sm btn1"onclick="clickbtn('8')">8</button></td>
+        <td><button type="button" value="9" class="btn btn-sm btn1"onclick="clickbtn('9')">9</button></td>
+        <td rowspan="4"><button type="button" class="btn btn-sm btn2"onclick="solve()">=</button></td>
+        </t`r>
+
+        <tr>
+        <td><button type="button" value="4" class="btn btn-sm btn1"onclick="clickbtn('4')">4</button></td>
+        <td><button type="button" value="5" class="btn btn-sm btn1"onclick="clickbtn('5')">5</button></td>
+        <td><button type="button" value="6" class="btn btn-sm  btn1"onclick="clickbtn('6')">6</button></td>
+        </tr>
+
+        <tr>
+        <td><button type="button" value="1" class="btn btn-sm btn1"onclick="clickbtn('1')">1</button></td>
+        <td><button type="button" value="2" class="btn btn-sm btn1"onclick="clickbtn('2')">2</button></td>
+        <td><button type="button" value="3" class="btn btn-sm btn1"onclick="clickbtn('3')">3</button></td>
+       </tr>
+
+        <tr>
+        <td><button type="button" value="0"  class="btn btn-sm btn1"onclick="clickbtn('0')">0</button></td>
+        <td><button type="button" value="."  class="btn btn-sm btn1"onclick="clickbtn('.')">.</button></td>
+        <td><button type="button"  class="btn btn-sm btn1"onclick="clr()">c</button></td>
+        </tr>
+
+
+
+      </table>  
+    </div>
+</body>
+
+
+</html>
